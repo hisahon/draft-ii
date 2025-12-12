@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IONO-DIET Project – Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #f4f4f4;
+            --bg-white: #ffffff;
+            --text-main: #1f2933;
+            --text-muted: #6b7280;
+            --accent: #00538a; /* marine blue */
+            --border: #e5e7eb;
+
+            --pill-bg: #f3f4f6;
+            --pill-role-bg: #e5f0fb;
+            --pill-orcid-bg: #e8f5e9;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Header */
+
+        header {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .logo-block img {
+            max-height: 40px;
+            height: auto;
+            width: auto;
+        }
+
+        .title-block {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .title-block h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .title-block p {
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: var(--bg-white);
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            white-space: nowrap;
+        }
+
+        /* Main */
+
+        main {
+            padding: 24px 0 32px;
+        }
+
+        .page-title {
+            margin: 0 0 16px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .intro-text {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 4px 0 20px;
+        }
+
+        .team-section {
+            margin-bottom: 24px;
+        }
+
+        .team-section h2 {
+            margin: 0 0 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .team-section p.section-note {
+            margin: 0 0 12px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .person-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px 16px;
+        }
+
+        .person-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 12px;
+        }
+
+        .person-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: baseline;
+        }
+
+        .person-name {
+            font-weight: 600;
+            font-size: 0.98rem;
+        }
+
+        .person-role-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            background: var(--pill-role-bg);
+            color: var(--text-main);
+            white-space: nowrap;
+        }
+
+        .person-affiliation {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .person-extra {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .person-links {
+            margin-top: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .link-pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            background: var(--pill-bg);
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .link-pill.orcid {
+            background: var(--pill-orcid-bg);
+        }
+
+        .link-pill:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 16px 0 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            font-size: 0.8rem;
+        }
+
+        /* Responsive grid: 2 cols on medium, 3 on large */
+
+        @media (min-width: 640px) {
+            .person-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .person-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .title-block {
+                text-align: left;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-block">
+                <img src="https://anr.fr/typo3conf/ext/anr_skin/Resources/Public/assets/img/anr-logo-2021@2x.png" alt="ANR logo">
+            </div>
+
+            <div class="title-block">
+                <h1>IONO-DIET Project</h1>
+                <p>Team</p>
+            </div>
+
+            <div class="logo-block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Logo_CNES_2017_triangulaire_bleu.png" alt="CNES logo">
+                <img src="https://fapesp.br/week2019/france/assets/img/logos-fapesp.png" alt="FAPESP logo">
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <div class="container">
+                <div class="nav-links">
+                    <a href="index.html">Main Page</a>
+                    <a href="project.html">About the Project</a>
+                    <a href="demo.html">Demo</a>
+                    <a href="news.html">News</a>
+                    <a href="developments.html">Developments</a>
+                    <a href="team.html">Team</a>
+                    <a href="publications.html">List of Publications</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+            <h2 class="page-title">Team</h2>
+            <p class="intro-text">
+                The IONO-DIET project brings together researchers from France, Brazil and international partners,
+                working on ionospheric monitoring, GNSS-based detection and tsunami/earthquake early warning.
+            </p>
+
+            <!-- PIs -->
+            <section class="team-section">
+                <h2>Principal Investigators (PIs)</h2>
+                <p class="section-note">
+                    Scientific coordination and overall project leadership.
+                </p>
+                <div class="person-grid">
+                    <!-- Astafyeva -->
+                    <div class="person-card">
+                        <div class="person-header">
+                            <div class="person-name">E. Astafyeva</div>
+                            <span class="person-role-tag">PI</span>
+                        </div>
+                        <div class="person-affiliation">IPGP, France</div>
+                        <div class="person-links">
+                            <a class="link-pill" href="https://www.researchgate.net/profile/Elvira-Astafyeva">ResearchGate</a>
+                            <a class="link-pill" href="https://scholar.google.com/citations?user=-vLMIH0AAAAJ&hl=en">Google Scholar</a>
+                            <!-- ORCID placeholder: update href when available -->
+                            <a class="link-pill orcid" href="#">ORCID</a>
+                        </div>
+                    </div>
+
+                    <!-- Kherani -->
+                    <div class="person-card">
+                        <div class="person-header">
+                            <div class="person-name">E. A. Kherani</div>
+                            <span class="person-role-tag">PI</span>
+                        </div>
+                        <div class="person-affiliation">INPE, Brazil</div>
+                        <div class="person-links">
+                            <a class="link-pill" href="https://www.researchgate.net/profile/Esfhan-Kherani">ResearchGate</a>
+                            <a class="link-pill" href="https://scholar.google.com/citations?hl=en&user=7Y0nJu0AAAAJ">Google Scholar</a>
+                            <!-- ORCID placeholder -->
+                            <a class="link-pill orcid" href="#">ORCID</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Postdocs -->
+            <section class="team-section">
+                <h2>Postdoctoral Researchers</h2>
+                <p class="section-note">
+                    Development of methods, data analysis and modelling within IONO-DIET.
+                </p>
+                <div class="person-grid">
+                    <!-- Maletckii -->
+                    <div class="person-card">
+                        <div class="person-header">
+                            <div class="person-name">B. Maletckii</div>
+                            <span class="person-role-tag">Postdoc</span>
+                        </div>
+                        <div class="person-affiliation">IPGP, France</div>
+                        <div class="person-links">
+                            <a class="link-pill" href="https://www.researchgate.net/profile/Boris-Maletckii-2">ResearchGate</a>
+                            <a class="link-pill" href="https://scholar.google.com/citations?user=uL2aczIAAAAJ&hl=en">Google Scholar</a>
+                            <!-- ORCID placeholder -->
+                            <a class="link-pill orcid" href="#">ORCID</a>
+                        </div>
+                    </div>
+
+                    <!-- Sanchez -->
+                    <div class="person-card">
+                        <div class="person-header">
+                            <div class="person-name">S. A. Sanchez</div>
+                            <span class="person-role-tag">Postdoc</span>
+                        </div>
+                        <div class="person-affiliation">INPE, Brazil</div>
+                        <div class="person-links">
+                            <a class="link-pill" href="https://www.researchgate.net/profile/Saul-Sanchez-Juarez">ResearchGate</a>
+                            <a class="link-pill" href="https://scholar.google.com/citations?user=QWWckHgAAAAJ&hl=en">Google Scholar</a>
+                            <!-- ORCID placeholder -->
+                            <a class="link-pill orcid" href="#">ORCID</a>
+                        </div>
+                    </div>
+
+                                        <!-- Honda -->
+                    <div class="person-card">
+                        <div class="person-header">
+                            <div class="person-name">R. H. Honda</div>
+                            <span class="person-role-tag">Posdoc</span>
+                        </div>
+                        <div class="person-affiliation">INPE, Brazil</div>
+                        <div class="person-links">
+                            <!-- Fill links when available -->
+                            <a class="link-pill" href="#">ResearchGate</a>
+                            <a class="link-pill" href="#">Google Scholar</a>
+                            <a class="link-pill orcid" href="#">ORCID</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PhD Students -->
+            <section class="team-section">
+                <h2>PhD Students</h2>
+                <p class="section-note">
+                    Doctoral research on ionospheric signatures of earthquakes and tsunamis, GNSS-based detection and related topics.
+                </p>
+                <div class="person-grid">
+                    <!-- Ouar -->
+                    <div class="person-card">
+                        <div class="person-header">
+                            <div class="person-name">I. D. Ouar</div>
+                            <span class="person-role-tag">PhD Student</span>
+                        </div>
+                        <div class="person-affiliation">IPGP, France</div>
+                        <div class="person-links">
+                            <a class="link-pill" href="https://www.researchgate.net/profile/Ines-Ouar">ResearchGate</a>
+                            <a class="link-pill" href="https://scholar.google.com/citations?user=0OafpUgAAAAJ&hl=en">Google Scholar</a>
+                            <!-- ORCID placeholder -->
+                            <a class="link-pill orcid" href="#">ORCID</a>
+                        </div>
+                    </div>
+
+                    <!-- Maréchal -->
+                    <div class="person-card">
+                        <div class="person-header">
+                            <div class="person-name">C. Maréchal</div>
+                            <span class="person-role-tag">PhD Student</span>
+                        </div>
+                        <div class="person-affiliation">IPGP, France</div>
+                        <div class="person-links">
+                            <!-- Fill links when available -->
+                            <a class="link-pill" href="#">ResearchGate</a>
+                            <a class="link-pill" href="#">Google Scholar</a>
+                            <a class="link-pill orcid" href="#">ORCID</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <!-- External collaborators -->
+            <section class="team-section">
+                <h2>External Collaborators</h2>
+                <p class="section-note">
+                    Collaborating researchers contributing to the development and validation of IONO-DIET methods.
+                </p>
+                <div class="person-grid">
+                    <!-- Brissaud -->
+                    <div class="person-card">
+                        <div class="person-header">
+                            <div class="person-name">Q. Brissaud</div>
+                            <span class="person-role-tag">External Collaborator</span>
+                        </div>
+                        <div class="person-affiliation">NORSAR, Norway</div>
+                        <div class="person-links">
+                            <a class="link-pill" href="https://www.researchgate.net/profile/Quentin-Brissaud">ResearchGate</a>
+                            <a class="link-pill" href="https://scholar.google.fr/citations?user=WiMbmDUAAAAJ&hl=en">Google Scholar</a>
+                            <!-- ORCID placeholder -->
+                            <a class="link-pill orcid" href="#">ORCID</a>
+                        </div>
+                    </div>
+
+                    <!-- Ravanelli -->
+                    <div class="person-card">
+                        <div class="person-header">
+                            <div class="person-name">M. Ravanelli</div>
+                            <span class="person-role-tag">External Collaborator</span>
+                        </div>
+                        <div class="person-affiliation">Sapienza University of Rome, Italy</div>
+                        <div class="person-links">
+                            <a class="link-pill" href="https://www.researchgate.net/profile/Michela-Ravanelli">ResearchGate</a>
+                            <a class="link-pill" href="https://scholar.google.com/citations?hl=en&user=w6sS0Q0AAAAJ">Google Scholar</a>
+                            <!-- ORCID placeholder -->
+                            <a class="link-pill orcid" href="#">ORCID</a>
+                        </div>
+                    </div>
+
+                    <!-- Rolland -->
+                    <div class="person-card">
+                        <div class="person-header">
+                            <div class="person-name">L. Rolland</div>
+                            <span class="person-role-tag">External Collaborator</span>
+                        </div>
+                        <div class="person-affiliation">Géoazur, France</div>
+                        <div class="person-links">
+                            <a class="link-pill" href="https://www.researchgate.net/profile/Lucie-Rolland-3">ResearchGate</a>
+                            <a class="link-pill" href="https://scholar.google.fr/citations?user=CziL3aQAAAAJ&hl=en">Google Scholar</a>
+                            <!-- ORCID placeholder -->
+                            <a class="link-pill orcid" href="#">ORCID</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2024 IONO-DIET Team |
+            <a href="mailto:astafyeva@ipgp.fr">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>

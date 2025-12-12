@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IONO-DIET Project – News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #f4f4f4;
+            --bg-white: #ffffff;
+            --text-main: #1f2933;
+            --text-muted: #6b7280;
+            --accent: #00538a; /* marine blue */
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Header */
+
+        header {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .logo-block img {
+            max-height: 40px;
+            height: auto;
+            width: auto;
+        }
+
+        .title-block {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .title-block h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .title-block p {
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: var(--bg-white);
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            white-space: nowrap;
+        }
+
+        /* Main */
+
+        main {
+            padding: 24px 0 32px;
+        }
+
+        .page-title {
+            margin: 0 0 16px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .intro-text {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 4px 0 20px;
+        }
+
+        .news-section {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 18px 16px 20px;
+            margin-bottom: 16px;
+        }
+
+        .news-section h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .news-section h3 {
+            margin: 16px 0 8px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .news-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .news-item {
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+
+        .news-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .news-desc {
+            font-size: .9rem;
+            margin: 2px 0 0;
+        }
+
+        .news-sublist {
+            font-size: .9rem;
+            margin: 8px 0 0 18px;
+            padding-left: 0;
+        }
+
+        .news-sublist li {
+            margin-bottom: 4px;
+        }
+
+        /* Tags */
+
+        .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 6px;
+            color: #1f2933;
+        }
+
+        .tag-publication {
+            background-color: #e3f2fd; /* pastel blue */
+        }
+
+        .tag-conference {
+            background-color: #ede7f6; /* pastel lavender */
+        }
+
+        .tag-phd {
+            background-color: #fce4ec; /* pastel pink */
+        }
+
+        .tag-project {
+            background-color: #fff3e0; /* pastel peach */
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 16px 0 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 640px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .title-block {
+                text-align: left;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-block">
+                <img src="https://anr.fr/typo3conf/ext/anr_skin/Resources/Public/assets/img/anr-logo-2021@2x.png" alt="ANR logo">
+            </div>
+
+            <div class="title-block">
+                <h1>IONO-DIET Project</h1>
+                <p>News</p>
+            </div>
+
+            <div class="logo-block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Logo_CNES_2017_triangulaire_bleu.png" alt="CNES logo">
+                <img src="https://fapesp.br/week2019/france/assets/img/logos-fapesp.png" alt="FAPESP logo">
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <div class="container">
+                <div class="nav-links">
+                    <a href="index.html">Main Page</a>
+                    <a href="project.html">About the Project</a>
+                    <a href="demo.html">Demo</a>
+                    <a href="news.html">News</a>
+                    <a href="developments.html">Developments</a>
+                    <a href="team.html">Team</a>
+                    <a href="publications.html">List of Publications</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+            <h2 class="page-title">News</h2>
+            <p class="intro-text">
+                Chronological updates about the IONO-DIET project: publications, conferences, milestones and team news.
+                Entries are grouped by year and kept in reverse chronological order.
+            </p>
+
+            <section class="news-section">
+                <h2>Timelapse</h2>
+
+                <!-- 2024 -->
+                <h3>2024</h3>
+                <ul class="news-list">
+                    <!-- Dec 2024 – AGU Annual Meeting -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-conference">Conference</span> Dec 2024
+                        </div>
+                        <div class="news-title">
+                            AGU Annual Meeting 2024, Washington D.C., USA. Presentations by: 
+                        </div>
+                        <ul class="news-sublist">
+                            <li>
+                                <b>E. Astafyeva, L. Rolland, M. Ravanelli, E. Kherani, Q. Brissaud,
+                                B. Maletckii, S. Sánchez Juarez, I.D. Ouar, M. Crespi, D. Mikesell,
+                                E. Munaibari, C. Maréchal</b> – GO-EUREKA: GNSS-observation based European system
+                                for earthquake and tsunami hazard assessment from the ionosphere.
+                            </li>
+                            <li>
+                                <b>B. Maletckii, E. Astafyeva</b> – Near-real-time identification of the source
+                                of ionospheric disturbances.
+                            </li>
+                            <li>
+                                <b>M. Ravanelli, E. Astafyeva, M. Crespi</b> – The ALTRUIST project:
+                                how to leverage the Total Variometric Approach for augmenting tsunami early warning systems.
+                            </li>
+                            <li>
+                                <b>I.D. Ouar, Q. Brissaud, E. Astafyeva</b> – Can we reveal earthquake-induced
+                                surface deformation from ionospheric data?
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Nov 2024 – JGR Paper Maletckii & Astafyeva -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-publication">Publication</span> Nov 2024
+                        </div>
+                        <p class="news-desc">
+                            <b>Maletckii, B. M., Astafyeva, E.</b> (2024).
+                            Near-Real-Time Identification of the Source of Ionospheric Disturbances.
+                            <i>Journal of Geophysical Research: Space Physics</i>, 129(11).
+                            <a href="https://doi.org/10.1029/2024JA032664">Open Access</a>
+                        </p>
+                    </li>
+
+                    <!-- Aug 2024 – GRL Paper on Starship -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-publication">Publication</span> Aug 2024
+                        </div>
+                        <p class="news-desc">
+                            <b>Yasyukevich, Y. V., Vesnin, A. M.,
+                            Astafyeva, E., Maletckii, B. M., Lebedev, V. P., Padokhin, A. M.</b>
+                            Supersonic Waves Generated by the 18 November 2023 Starship Flight and Explosions:
+                            Unexpected Northward Propagation and a Man-Made Non-chemical Depletion.
+                            <i>Geophysical Research Letters</i>, 51(16).
+                            <a href="https://doi.org/10.1029/2024GL109284">Open Access</a>
+                        </p>
+                    </li>
+
+                    <!-- May 2024 – URSI Symposium -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-conference">Conference</span> May 2024
+                        </div>
+                        <div class="news-title">
+                            URSI AT-AP-RASC Symposium, Gran Canaria, Spain. Presentations by: 
+                        </div>
+                        <ul class="news-sublist">
+                            <li>
+                                <b>E. Astafyeva, Q. Brissaud, B. Maletckii, I. D. Ouar,
+                                S.A. Sanchez Juarez, E.A. Kherani</b> –
+                                Near-real-time automatic detection of travelling ionospheric disturbances – dream or reality?
+                            </li>
+                            <li>
+                                <b>B. Maletckii, E. Astafyeva</b> –
+                                Near-Real-Time Classification of Traveling Ionospheric Disturbances
+                                of Natural Hazards and Space Weather by GNSS data.
+                            </li>
+                            <li>
+                                <b>I. D. Ouar, E. Astafyeva, B. Maletckii</b> –
+                                Effect of 14 October 2023 annular eclipse on the ionosphere and Earth magnetic field.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Jan 2024 – EPS Paper on 2020 Samos -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-publication">Publication</span> Jan 2024
+                        </div>
+                        <p class="news-desc">
+                            <b>Alfonsi, L., Cesaroni, C., Astafyeva, E., Bufféral, S., Elias, P.,
+                            Belehaki, A., Ioanna, T., Yang, H., &amp; Guerra, M. </b>
+                            Ionospheric response to the 2020 Samos earthquake and tsunami.
+                            <i>Earth, Planets and Space</i>, 76(1), 1–14.
+                            <a href="https://doi.org/10.1186/s40623-023-01940-2">Open Access</a>
+                        </p>
+                    </li>
+                </ul>
+
+                <!-- 2023 -->
+                <h3>2023</h3>
+                <ul class="news-list">
+                    <!-- Dec 2023 – AGU Fall Meeting -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-conference">Conference</span> Dec 2023
+                        </div>
+                        <div class="news-title">
+                            AGU Fall Meeting 2023, San Francisco, USA. Presentations by: 
+                        </div>
+                        <ul class="news-sublist">
+                            <li>
+                                <b>S.A. Sanchez Juarez, E.A. Kherani, E. Astafyeva, E. de Paula</b> –
+                                Observational and analytical simulation study of rapid co-seismic ionospheric
+                                disturbances during strong earthquakes.
+                            </li>
+                            <li>
+                                <b>M. Ravanelli, E. Astafyeva, M. Crespi</b> –
+                                Integrating ground, ionosphere, and sea level data for a comprehensive analysis of the
+                                2023 Kahramanmaras earthquake sequence.
+                            </li>
+                            <li>
+                                <b>B. Maletckii, E. Astafyeva</b> –
+                                Distinguishing the origin of travelling ionospheric disturbances in near-real-time.
+                            </li>
+                            <li>
+                                <b>E. Astafyeva, Q. Brissaud, B. Maletckii, S.A. Sanchez Juarez,
+                                R. H. Honda, E.A. Kherani, I. D. Ouar, M. Ravanelli</b> –
+                                Toward automatic near-real-time detection of travelling ionospheric disturbances (TIDs)
+                                driven by lower atmosphere and near-surface geophysical events.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Dec 2023 – PhD defense Boris -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-phd">Human Resources</span> Dec 2023
+                        </div>
+                        <p class="news-desc">
+                            PhD defense of <b>Boris Maletckii</b> (IPGP/CNES, France).
+                        </p>
+                    </li>
+
+                    <!-- Oct 2023 – PhD start Ines -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-phd">Human Resources</span> Oct 2023
+                        </div>
+                        <p class="news-desc">
+                            PhD start of <b>Ines Dahlia Ouar</b> (ANR/IPGP, France).
+                        </p>
+                    </li>
+
+                    <!-- Sep 2023 – JGR Paper Sanchez et al. -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-publication">Publication</span> Sep 2023
+                        </div>
+                        <p class="news-desc">
+                            <b>Sanchez, S. A., Kherani, E. A., &amp; Astafyeva, E.</b>
+                            Rapid Detection of Co-Seismic Ionospheric Disturbances Associated With the 2015 Illapel,
+                            the 2014 Iquique and the 2011 Sanriku-Oki Earthquakes.
+                            <i>Journal of Geophysical Research: Space Physics</i>, 128(9).
+                            <a href="https://doi.org/10.1029/2022JA031231">Open Access</a>
+                        </p>
+                    </li>
+
+                    <!-- Aug 2023 – JGR Paper Turkish sequence -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-publication">Publication</span> Aug 2023
+                        </div>
+                        <p class="news-desc">
+                            <b>B. Maletckii, E. Astafyeva, S. A. Sanchez Juarez, E.A. Kherani</b>
+                            The 6 February 2023 Türkiye earthquake sequence as detected in the ionosphere.
+                            <i>Journal of Geophysical Research: Space Physics</i>, 128(9), e2023JA031663.
+                            <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023JA031663">Open Access</a>
+                        </p>
+                    </li>
+
+                    <!-- Aug 2023 – URSI GASS -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-conference">Conference</span> Aug 2023
+                        </div>
+                        <div class="news-title">
+                            URSI GASS 2023, Sapporo, Japan. Presentations by: 
+                        </div>
+                        <ul class="news-sublist">
+                            <li>
+                                <b>E. Astafyeva, B. Maletckii, Q. Brissaud, M. Ravanelli,
+                                S. Sanchez Juarez, I. Seim Kavlie</b> –
+                                Development of ionosphere-based methods for disaster risk assessment in near-real-time.
+                                (Invited)
+                            </li>
+                            <li>
+                                <b>E. Astafyeva, B. Maletckii, P. Inchin,
+                                Q. Brissaud, S. Sanchez Juarez, E.A. Kherani, E. de Paula</b> –
+                                On the altitude of GNSS detection of co-seismic ionospheric disturbances.
+                            </li>
+                            <li>
+                                <b>B. Maletckii, E. Astafyeva</b> –
+                                Can we characterize traveling ionospheric disturbances in noisy GNSS data
+                                in near real-time?
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- May 2023 – GRL Paper Hunga Tonga -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-publication">Publication</span> May 2023
+                        </div>
+                        <p class="news-desc">
+                            <b>Ravanelli, M., Astafyeva, E., Munaibari, E., Rolland, L., &amp; Mikesell, T. D.</b>
+                            Ocean-Ionosphere Disturbances Due To the 15 January 2022 Hunga-Tonga Hunga-Ha'apai Eruption.
+                            <i>Geophysical Research Letters</i>, 50(10).
+                            <a href="https://doi.org/10.1029/2022GL101465">Open Access</a>
+                        </p>
+                    </li>
+
+                    <!-- May 2023 – PhD defense Saúl -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-phd">Human Resources</span> May 2023
+                        </div>
+
+                        <p class="news-desc">
+                            PhD defense of <b>Saúl Sanchez Juarez</b> (INPE, Brazil).
+                        </p>
+                    </li>
+
+                    <!-- Jan 2023 – Start of the project -->
+                    <li class="news-item">
+                        <div class="news-meta">
+                            <span class="tag tag-project">Project Start</span> 01 Jan 2023
+                        </div>
+                        <p class="news-desc">
+                            Official start of the IONO-DIET project.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2024 IONO-DIET Team |
+            <a href="mailto:astafyeva@ipgp.fr">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>

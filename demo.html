@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IONO-DIET Project – Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #f4f4f4;
+            --bg-white: #ffffff;
+            --text-main: #1f2933;
+            --text-muted: #6b7280;
+            --accent: #00538a; /* marine blue */
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Header (mesmo estilo das outras páginas) */
+
+        header {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .logo-block img {
+            max-height: 40px;
+            height: auto;
+            width: auto;
+        }
+
+        .title-block {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .title-block h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .title-block p {
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: var(--bg-white);
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            white-space: nowrap;
+        }
+
+        /* Main */
+
+        main {
+            padding: 24px 0 32px;
+        }
+
+        .section {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 18px 16px 20px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            margin: 12px 0 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 8px 0;
+            text-align: justify;
+        }
+
+        /* Video */
+
+        .video-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 12px 0 6px;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .video-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 6px;
+        }
+
+        /* Figures */
+
+        .figure-block {
+            margin: 12px 0;
+            text-align: center;
+        }
+
+        .figure-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .figure-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            text-align: left;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 16px 0 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 640px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .title-block {
+                text-align: left;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-block">
+                <img src="https://anr.fr/typo3conf/ext/anr_skin/Resources/Public/assets/img/anr-logo-2021@2x.png" alt="ANR logo">
+            </div>
+
+            <div class="title-block">
+                <h1>IONO-DIET Project</h1>
+                <p>Demo</p>
+            </div>
+
+            <div class="logo-block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Logo_CNES_2017_triangulaire_bleu.png" alt="CNES logo">
+                <img src="https://fapesp.br/week2019/france/assets/img/logos-fapesp.png" alt="FAPESP logo">
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <div class="container">
+                <div class="nav-links">
+                    <a href="index.html">Main Page</a>
+                    <a href="project.html">About the Project</a>
+                    <a href="demo.html">Demo</a>
+                    <a href="news.html">News</a>
+                    <a href="developments.html">Developments</a>
+                    <a href="team.html">Team</a>
+                    <a href="publications.html">List of Publications</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+            <!-- DEMO VIDEO -->
+            <section class="section">
+                <h2>Demo</h2>
+                <div class="video-wrapper">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="https://raw.githubusercontent.com/IONO-DIET/IONO-DIET.github.io/main/figures_extra/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <p class="video-caption">
+                    Video from Maletckii &amp; Astafyeva (2024).
+                </p>
+            <!-- /section -->
+
+            <!-- EXAMPLE 1 -->
+            <!-- section class="section" -->
+                <h3><b>Example 1 – The 2024 Noto Earthquake (Japan)</b></h3>
+                <p class="video-caption">
+                    [Maletckii &amp; Astafyeva, <a href="https://doi.org/10.1029/2024JA032664" target="_blank">2024</a>]
+                </p>
+                <p>
+                    On 1 January 2024 at 07:10:09 UTC, a major M7.5 earthquake struck the Noto peninsula of Japan. Focal mechanism solutions
+                    for the earthquake indicate faulting occurred on a moderately dipping reverse fault striking to the southwest or northeast
+                    (<a href="https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xl/executive" target="_blank">
+                        https://earthquake.usgs.gov/earthquakes/eventpage/us6000m0xl/executive
+                    </a>).
+                    The earthquake occurred during local evening pre-sunset time, which means that TIDs driven by the passage of the solar terminator
+                    are very likely to occur. Indeed, this is what we observed to the north-east from the epicenter before the earthquake in the dTEC/dt data.
+                </p>
+                <p>
+                    The earthquake generated a disturbance in the ionosphere that is visible as quasi-periodic fluctuations in the dTEC/dt parameter.
+                    The CSID propagated from the epicentral area in the south-eastward segment, and can be clearly seen for only ~200 km of horizontal
+                    distance from the epicenter. We note that the “background” TIDs near the solar terminator have similar waveforms, and the Noto case
+                    is a good example to demonstrate the importance of distinguishing the origin of the disturbances that we detect.
+                </p>
+
+                <div class="figure-block" id="figure_1">
+                    <img src="https://raw.githubusercontent.com/IONO-DIET/IONO-DIET.github.io/main/figures_extra/figure_Noto.png"
+                         alt="Supporting Figure 1 – Noto earthquake analysis">
+                    <div class="figure-caption">
+                        <b>Supporting Figure 1.</b>
+                        (a) Timeline for the automatic NRT analysis of ionospheric disturbances generated by the 2024 Noto earthquake:
+                        sound speed profile (blue) and average acoustic wave velocity to reach hmF2 estimated from IRI-2016 (red) and JJ433
+                        ionosonde (green). (b) First instantaneous velocities obtained using the D1-GNSS-RT method in NRT. (c) NRT clustering of
+                        TIDs generated by the Noto earthquake (purple) in the distance–velocity space. The timeline at the bottom shows the timing
+                        of the main steps of TID detection and characterization. The first tsunami warning by JMA was issued ~12 min after the earthquake.
+                    </div>
+                </div>
+
+                <p>
+                    We applied methods developed by Maletckii &amp; Astafyeva (2021; 2022; 2023; 2024) to the 2024 Noto case (30-sec data). On that day,
+                    and during the time of the earthquake, the acoustic wave would take about 8.5 minutes to reach the height of the ionospheric maximum (HmF2).
+                </p>
+                <p>
+                    In 9.5–10 minutes after the earthquake onset time, we obtain the first instantaneous velocity field, showing the direction of CSID
+                    propagation as well as their velocities. One can see that the velocity vectors show the correct direction of propagation, as seen in the demo video.
+                </p>
+                <p>
+                    Further, in 12–15 minutes after the earthquake onset, our clustering algorithm places the Noto CSID (pink oval in panel (c))
+                    next to previous earthquakes, indicating that the observed disturbance is of seismic origin.
+                </p>
+            </section>
+
+            <!-- EXAMPLE 2 -->
+            <section class="section">
+                <h3><b>Example 2 – The 2014 Iquique Earthquake (Chile)</b></h3>
+                <p class="video-caption">
+                    [Brissaud &amp; Astafyeva, <a href="https://doi.org/10.1093/gji/ggac167" target="_blank">2022</a>]
+                </p>
+                <p>
+                    Below is an example of the automatic detection of co-seismic ionospheric disturbances due to the 2014 Iquique earthquake (Chile).
+                    It only takes about 100 seconds to capture the CSID and to estimate their arrival times. Further, one can see that this allows
+                    imaging of the seismic source area (panel (b)).
+                </p>
+
+                <div class="figure-block" id="figure_2">
+                    <img src="https://raw.githubusercontent.com/IONO-DIET/IONO-DIET.github.io/main/figures_extra/figure_Chile.jpeg"
+                         alt="Supporting Figure 2 – Iquique earthquake ionospheric maps">
+                    <div class="figure-caption">
+                        <b>Supporting Figure 2.</b>
+                        Ionospheric maps for the 2014 Iquique earthquake. (a) Map showing the epicentre location (yellow star) and surface projection
+                        of the fault slip (in m) as green to yellow patches. (b) CID detections using an RF-based classifier and time picker, and
+                        (c) association classes determined from confirmed detections. CID coordinates were calculated at the intersection point between
+                        the LOS and the ionospheric layer using Hion = 250 km. These maps can be generated ~15 minutes after the event.
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXAMPLE 3 -->
+            <section class="section">
+                <h3><b>Example 3 – The 2011 Tohoku Tsunami Arrival to the US Coast</b></h3>
+                <p class="video-caption">
+                    [Maletckii &amp; Astafyeva, <a href="https://doi.org/10.1029/2024JA032664" target="_blank">2024</a>]
+                </p>
+                <p>
+                    On 11 March 2011 at 05:46 UT, a M9.0 earthquake generated a large tsunami. After 11–12 hours of propagation across the Pacific Ocean,
+                    the tsunami reached the US west coast. The tsunami caused quasi-periodic disturbances in the ionosphere (panel (a)). The current version
+                    of AIDE does not detect such disturbances, but the dTEC/dt approach detected them and estimated their velocities and direction of propagation.
+                </p>
+                <p>
+                    Panel (b) shows the instantaneous velocity fields calculated from co-tsunamic ionospheric disturbances detected by GPS satellite PRN 22.
+                    The grey arrow corresponds to 0.1 km/s. Panel (c) shows the localization of ionospheric centers estimated from the velocity vectors
+                    (blue dots). Panel (d) presents the distribution of co-tsunamic ionospheric disturbances obtained using the D1-GNSS-RT method, where
+                    the x-axis is the velocity (m/s) and the y-axis is the fraction of these velocities in the results.
+                </p>
+
+                <div class="figure-block" id="figure_3">
+                    <img src="https://raw.githubusercontent.com/IONO-DIET/IONO-DIET.github.io/main/figures_extra/figure_Tohoku.png"
+                         alt="Supporting Figure 3 – Tohoku tsunami ionospheric response">
+                    <div class="figure-caption">
+                        <b>Supporting Figure 3.</b>
+                        (a) NOAA NGDC map of tsunami arrival time (hours) during the 2011 Japan tsunami
+                        (<a href="http://www.ngdc.noaa.gov/hazard/11mar2011.html" target="_blank">NOAA hazard map</a>).
+                        (b) GNSS receiver network (yellow dots) used for the tsunami produced by the Tohoku earthquake on the US west coast.
+                        (c) Instantaneous velocity fields derived from co-tsunamic ionospheric disturbances detected by GPS satellite PRN 22.
+                        (d) Localization of ionospheric centres estimated from the velocity vectors (blue dots).
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2024 IONO-DIET Team |
+            <a href="mailto:astafyeva@ipgp.fr" target="_blank">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>

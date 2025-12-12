@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IONO-DIET Project – Developments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #f4f4f4;
+            --bg-white: #ffffff;
+            --text-main: #1f2933;
+            --text-muted: #6b7280;
+            --accent: #00538a; /* marine blue */
+            --border: #e5e7eb;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .logo-block img {
+            max-height: 40px;
+            height: auto;
+            width: auto;
+        }
+
+        .title-block {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .title-block h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .title-block p {
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--bg-white);
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            justify-content: center;
+        }
+
+        .nav-links a { white-space: nowrap; }
+
+        /* Main */
+        main { padding: 24px 0 32px; }
+
+        .section {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 18px 16px 20px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            margin: 14px 0 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 8px 0;
+            text-align: justify;
+        }
+
+        .meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .label {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            margin-right: 8px;
+            transform: translateY(-1px);
+        }
+
+        /* Figures */
+        .figure-block {
+            margin: 14px 0 6px;
+            text-align: center;
+        }
+
+        .figure-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        .figure-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            text-align: left;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 16px 0 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        footer a { font-size: 0.8rem; }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .title-block { text-align: left; }
+            .nav-links {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-block">
+                <img src="https://anr.fr/typo3conf/ext/anr_skin/Resources/Public/assets/img/anr-logo-2021@2x.png" alt="ANR logo">
+            </div>
+
+            <div class="title-block">
+                <h1>IONO-DIET Project</h1>
+                <p>Developments</p>
+            </div>
+
+            <div class="logo-block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Logo_CNES_2017_triangulaire_bleu.png" alt="CNES logo">
+                <img src="https://fapesp.br/week2019/france/assets/img/logos-fapesp.png" alt="FAPESP logo">
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <div class="container">
+                <div class="nav-links">
+                    <a href="index.html">Main Page</a>
+                    <a href="project.html">About the Project</a>
+                    <a href="demo.html">Demo</a>
+                    <a href="news.html">News</a>
+                    <a href="developments.html">Developments</a>
+                    <a href="team.html">Team</a>
+                    <a href="publications.html">List of Publications</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+
+            <section class="section">
+                <h2>Developments</h2>
+                <p class="meta">
+                    Methods and tools developed within IONO-DIET for near-real-time (NRT) analysis of ionospheric disturbances.
+                </p>
+            </section>
+
+            <!-- NRT CLUSTERING -->
+            <section class="section">
+                <h3><span class="label">Method</span>NRT Clustering</h3>
+                <p class="meta">
+                    From: <b>Maletckii, B.</b>, <b>Astafyeva, E.</b> (2024). Near-Real-Time Identification of the Source of Ionospheric Disturbances.
+                    Journal of Geophysical Research: Space Physics, 129(11),
+                    <a href="https://doi.org/10.1029/2024JA032664">Open Access</a>
+                </p>
+
+                <p>
+                    <b>Abstract:</b> The ionosphere is characterized by a large number of disturbances generated in response to a wide range of phenomena,
+                    including natural hazards, space weather and man-made events. Identification of the origin of ionospheric disturbances (ID), especially
+                    in real or near-real-time (NRT), is an extremely difficult task. This work presents an approach for automatic and NRT-compatible detection
+                    and recognition of the source of ionospheric disturbances in TEC time series measured by GNSS. The main idea is to characterize IDs from
+                    known sources (spatio-temporal features and frequency content) and, in NRT, compare new IDs to these reference characteristics.
+                </p>
+
+                <div class="figure-block" id="nrt_clustering_fig">
+                    <img src="https://raw.githubusercontent.com/IONO-DIET/IONO-DIET.github.io/main/figures_extra/figure_clusters.png"
+                         alt="Clustering of ionospheric disturbances driven by multiple sources">
+                    <div class="figure-caption">
+                        <b>Supporting Figure.</b> Clustering of ionospheric disturbances driven by six sources based on spatio-temporal features
+                        (instantaneous velocities, dominant frequencies, and distances between ionospheric centres).
+                    </div>
+                </div>
+            </section>
+
+            <!-- D1-GNSS-RT -->
+            <section class="section">
+                <h3><span class="label">Method</span>D1-GNSS-RT</h3>
+                <p class="meta">
+                    From: <b>Maletckii, B.</b>, <b>Astafyeva, E.</b> (2021). Determining spatio-temporal characteristics of coseismic travelling ionospheric
+                    disturbances (CTID) in near real-time. Scientific Reports, 11(1), 1–16.
+                    <a href="https://doi.org/10.1038/s41598-021-99906-5">Open Access</a>
+                </p>
+
+                <p>
+                    <b>Abstract:</b> This work presents a method to automatically detect co-seismic travelling ionospheric disturbances (CTID) and determine
+                    their spatio-temporal characteristics (velocity and azimuth) in near-real time (less than ~15 minutes after an earthquake). The method
+                    provides instantaneous velocities that allow tracking CTID evolution and estimating the CTID source location in NRT, and introduces
+                    real-time travel-time diagrams to validate correlation with the source and estimate propagation speed.
+                </p>
+
+                <div class="figure-block" id="d1_fig">
+                    <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-021-99906-5/MediaObjects/41598_2021_99906_Fig4_HTML.png?as=webp"
+                         alt="D1 technique explanation figure">
+                    <div class="figure-caption">
+                        <b>Supporting Figure.</b> (a) Explanation of the D1 technique using a GNSS triangle (stations A, B, C) to derive velocity and azimuth.
+                        (b) Ionospheric localization of CTIDs from velocity vectors.
+                    </div>
+                </div>
+            </section>
+
+            <!-- NRT-TTD -->
+            <section class="section">
+                <h3><span class="label">Method</span>NRT–TTD Fitting</h3>
+                <p class="meta">
+                    From: <b>Maletckii, B.</b>, <b>Astafyeva, E.</b> (2022). Near-Real-Time Analysis of the Ionospheric Response to the
+                    15 January 2022 Hunga Tonga–Hunga Ha'apai Volcanic Eruption. Journal of Geophysical Research: Space Physics, 127(10).
+                    <a href="https://doi.org/10.1029/2022JA030735">Open Access</a>
+                </p>
+
+                <p>
+                    <b>Abstract:</b> This work introduces NRT methods to determine instantaneous velocities using an interferometric approach and dTEC/dt,
+                    and proposes an automatic approach to estimate apparent propagation velocity from near-real-time travel-time diagrams (TTDs).
+                    The methods support low spatial resolution networks and 30-s cadence data, enabling NRT spatio-temporal analysis of TEC responses
+                    to smaller-amplitude events.
+                </p>
+
+                <div class="figure-block" id="ttd_fig">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/eadd2785-41e1-46c2-bd7c-9c509fc64907/jgra57458-fig-0003-m.jpg"
+                         alt="Application of NRT-TTD method figure">
+                    <div class="figure-caption">
+                        <b>Supporting Figure.</b> Application of the NRT–TTD method (near-field, 30-s data) and fitted velocity estimates from TTD slope.
+                    </div>
+                </div>
+            </section>
+
+            <!-- AIDE -->
+            <section class="section">
+                <h3><span class="label">Algorithm</span>AIDE (Machine-learning-based NRT CID Detection)</h3>
+                <p class="meta">
+                    From: <b>Brissaud, Q.</b>, <b>Astafyeva, E.</b> (2022). Near-real-time detection of co-seismic ionospheric disturbances using machine learning.
+                    Geophysical Journal International, 230(3), 2117–2130.
+                    <a href="https://doi.org/10.1093/gji/ggac167">Open Access</a>
+                </p>
+
+                <p>
+                    <b>Abstract:</b> This framework enables near-real-time detection of co-seismic ionospheric disturbances (CIDs) using machine learning:
+                    classification of waveforms (CID vs noise), picking of arrival times, and association across a satellite network in NRT.
+                    The approach supports rapid imaging of surface displacements from ionospheric observations.
+                </p>
+
+                <div class="figure-block" id="aide_fig">
+                    <img src="https://raw.githubusercontent.com/IONO-DIET/IONO-DIET.github.io/main/figures_extra/figure_Chile.jpeg"
+                         alt="Ionospheric maps for the 2014 Iquique earthquake figure">
+                    <div class="figure-caption">
+                        <b>Supporting Figure.</b> Example outputs for the 2014 Iquique earthquake: slip projection, CID detections, and association classes.
+                    </div>
+                </div>
+            </section>
+
+            <!-- ANALYTICAL SIMULATION CODE -->
+            <section class="section">
+                <h3><span class="label">Model</span>Analytical AGW Simulation &amp; Rapid CSTD Energetics</h3>
+                <p class="meta">
+                    From: <b>Sanchez, S. A.</b>, <b>Kherani, E. A.</b> (2024). A New Analytical Simulation Code of Acoustic-Gravity Waves of Seismic Origin and Rapid
+                    Co-Seismic Thermospheric Disturbance Energetics. Atmosphere, 15(5), 592.
+                    <a href="https://doi.org/10.3390/atmos15050592">Open Access</a>
+                </p>
+
+                <p>
+                    <b>Abstract:</b> The study presents an analytical simulation code for seismic-origin acoustic-gravity waves (AGWs), resolving governing equations
+                    in the time–altitude and wavenumber domain. It supports rapid tracking of AGW arrivals in the thermosphere and fast formation of co-seismic
+                    thermospheric disturbances (CSTDs), enabling scenarios favorable for early forecasting.
+                </p>
+
+                <div class="figure-block" id="agw_fig">
+                    <img src="https://www.mdpi.com/atmosphere/atmosphere-15-00592/article_deploy/html/images/atmosphere-15-00592-g005.png"
+                         alt="Ray-tracing simulation results figure">
+                    <div class="figure-caption">
+                        <b>Supporting Figure.</b> Example ray-tracing results showing travel times using an average sound speed estimate.
+                    </div>
+                </div>
+            </section>
+
+            <!-- EVENTS DATABASE -->
+            <section class="section">
+                <h3><span class="label">Resource</span>Events Database</h3>
+                <p class="meta">
+                    Accessible on demand. Contact: <a href="mailto:astafyeva@ipgp.fr">astafyeva@ipgp.fr</a>
+                </p>
+                <p>
+                    The database contains curated GNSS-TEC response time series for multiple disturbance sources used to develop and benchmark NRT methods.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2024 IONO-DIET Team | <a href="mailto:astafyeva@ipgp.fr">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>

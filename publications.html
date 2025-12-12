@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IONO-DIET Project – Publications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg-page:#f4f4f4;
+            --bg-white:#ffffff;
+            --text-main:#1f2933;
+            --text-muted:#6b7280;
+            --accent:#00538a; /* marine blue */
+            --border:#e5e7eb;
+        }
+
+        *{ box-sizing:border-box; }
+
+        body{
+            margin:0;
+            font-family:'Montserrat', Arial, sans-serif;
+            background:var(--bg-page);
+            color:var(--text-main);
+        }
+
+        a{ color:var(--accent); text-decoration:none; }
+        a:hover{ text-decoration:underline; }
+
+        .container{
+            max-width:960px;
+            margin:0 auto;
+            padding:0 16px;
+        }
+
+        /* Header */
+        header{
+            background:var(--bg-white);
+            border-bottom:1px solid var(--border);
+        }
+
+        .header-inner{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:16px;
+            padding:16px 0;
+            flex-wrap:wrap;
+        }
+
+        .logo-block{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            flex-wrap:wrap;
+        }
+
+        .logo-block img{
+            max-height:40px;
+            height:auto;
+            width:auto;
+        }
+
+        .title-block{
+            text-align:center;
+            flex:1;
+            min-width:200px;
+        }
+
+        .title-block h1{
+            margin:0;
+            font-size:1.6rem;
+            font-weight:600;
+            color:var(--accent);
+        }
+
+        .title-block p{
+            margin:4px 0 0;
+            font-size:.85rem;
+            color:var(--text-muted);
+        }
+
+        /* Nav */
+        nav{
+            background:var(--bg-white);
+            border-top:1px solid var(--border);
+        }
+
+        .nav-links{
+            display:flex;
+            flex-wrap:wrap;
+            gap:12px 18px;
+            padding:10px 0;
+            font-size:.9rem;
+            justify-content:center;
+        }
+
+        .nav-links a{ white-space:nowrap; }
+
+        /* Main */
+        main{ padding:24px 0 32px; }
+
+        .page-title{
+            margin:0 0 10px;
+            font-size:1.4rem;
+            font-weight:600;
+        }
+
+        .intro-text{
+            margin:0 0 18px;
+            font-size:.95rem;
+            color:var(--text-muted);
+        }
+
+        .card{
+            background:var(--bg-white);
+            border:1px solid var(--border);
+            border-radius:8px;
+            padding:16px;
+        }
+
+        .pub-list{
+            margin:0;
+            padding-left:18px;
+        }
+
+        .pub-list li{
+            margin:10px 0;
+            line-height:1.45;
+        }
+
+        /* Footer */
+        footer{
+            text-align:center;
+            padding:16px 0 20px;
+            font-size:.8rem;
+            color:var(--text-muted);
+        }
+
+        footer a{ font-size:.8rem; }
+
+        /* Responsive */
+        @media (max-width:640px){
+            .header-inner{
+                flex-direction:column;
+                align-items:flex-start;
+            }
+            .title-block{ text-align:left; }
+            .nav-links{
+                justify-content:flex-start;
+                overflow-x:auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-block">
+                <img src="https://anr.fr/typo3conf/ext/anr_skin/Resources/Public/assets/img/anr-logo-2021@2x.png" alt="ANR logo">
+            </div>
+
+            <div class="title-block">
+                <h1>IONO-DIET Project</h1>
+                <p>List of Publications</p>
+            </div>
+
+            <div class="logo-block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Logo_CNES_2017_triangulaire_bleu.png" alt="CNES logo">
+                <img src="https://fapesp.br/week2019/france/assets/img/logos-fapesp.png" alt="FAPESP logo">
+            </div>
+        </div>
+
+        <!-- NAVIGATION (relative links as requested) -->
+        <nav>
+            <div class="container">
+                <div class="nav-links">
+                    <a href="index.html">Main Page</a>
+                    <a href="project.html">About the Project</a>
+                    <a href="demo.html">Demo</a>
+                    <a href="news.html">News</a>
+                    <a href="developments.html">Developments</a>
+                    <a href="team.html">Team</a>
+                    <a href="publications.html">List of Publications</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+            <h2 class="page-title">List of Publications</h2>
+            <p class="intro-text">
+                Selected publications associated with the IONO-DIET project. (Most recent first.)
+            </p>
+
+            <div class="card">
+                <ol class="pub-list" reversed>
+                    <li>
+                        <b>Maletckii, B., Astafyeva, E.</b> (2024).
+                        Near-Real-Time Identification of the Source of Ionospheric Disturbances.
+                        <i>Journal of Geophysical Research: Space Physics</i>, 129(11),
+                        <a href="https://doi.org/10.1029/2024JA032664">Open Access</a>
+                    </li>
+
+                    <li>
+                        Yasyukevich, Y. V., Vesnin, A. M., <b>Astafyeva, E., Maletckii, B. M.</b>,
+                        Lebedev, V. P., &amp; Padokhin, A. M. (2024).
+                        Supersonic Waves Generated by the 18 November 2023 Starship Flight and Explosions:
+                        Unexpected Northward Propagation and a Man-Made Non-chemical Depletion.
+                        <i>Geophysical Research Letters</i>, 51(16),
+                        <a href="https://doi.org/10.1029/2024GL109284">Open Access</a>
+                    </li>
+
+                    <li>
+                        Alfonsi, L., Cesaroni, C., <b>Astafyeva, E.</b>, Bufféral, S., Elias, P., Belehaki, A.,
+                        Ioanna, T., Yang, H., &amp; Guerra, M. (2024).
+                        Ionospheric response to the 2020 Samos earthquake and tsunami.
+                        <i>Earth, Planets and Space</i>, 76(1), 1–14,
+                        <a href="https://doi.org/10.1186/s40623-023-01940-2">Open Access</a>
+                    </li>
+
+                    <li>
+                        <b>Sanchez, S. A., Kherani, E. A., &amp; Astafyeva, E.</b> (2023).
+                        Rapid Detection of Co-Seismic Ionospheric Disturbances Associated With the 2015 Illapel,
+                        the 2014 Iquique and the 2011 Sanriku-Oki Earthquakes.
+                        <i>Journal of Geophysical Research: Space Physics</i>, 128(9),
+                        <a href="https://doi.org/10.1029/2022JA031231">Open Access</a>
+                    </li>
+
+                    <li>
+                        <b>Maletckii, B., Astafyeva, E., Sanchez Juarez, S. A., Kherani, E. A.</b> (2023).
+                        The 6 February 2023 Türkiye earthquake sequence as detected in the ionosphere.
+                        <i>Journal of Geophysical Research: Space Physics</i>, 128(9), e2023JA031663,
+                        <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023JA031663">Open Access</a>
+                    </li>
+
+                    <li>
+                        <b>Ravanelli, M., Astafyeva, E.</b>, Munaibari, E., Rolland, L., &amp; Mikesell, T. D. (2023).
+                        Ocean-Ionosphere Disturbances Due To the 15 January 2022 Hunga-Tonga Hunga-Ha'apai Eruption.
+                        <i>Geophysical Research Letters</i>, 50(10),
+                        <a href="https://doi.org/10.1029/2022GL101465">Open Access</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2024 IONO-DIET Team |
+            <a href="mailto:astafyeva@ipgp.fr">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IONO-DIET Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #f4f4f4;
+            --bg-white: #ffffff;
+            --text-main: #1f2933;
+            --text-muted: #6b7280;
+            --accent: #00538a; /* marine blue */
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Header */
+
+        header {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .logo-block img {
+            max-height: 40px;
+            height: auto;
+            width: auto;
+        }
+
+        .title-block {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .title-block h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .title-block p {
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: var(--bg-white);
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            white-space: nowrap;
+        }
+
+        /* Main */
+
+        main {
+            padding: 24px 0 32px;
+        }
+
+        section {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 18px 16px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 8px 0;
+            text-align: justify;
+        }
+
+        .small-text {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .grant {
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+
+        .grant a {
+            font-weight: 600;
+        }
+
+        /* Objectives */
+
+        ol {
+            padding-left: 18px;
+            margin: 8px 0 0;
+            font-size: 0.95rem;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 16px 0 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 640px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .title-block {
+                text-align: left;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-block">
+                <img src="https://anr.fr/typo3conf/ext/anr_skin/Resources/Public/assets/img/anr-logo-2021@2x.png" alt="ANR logo">
+            </div>
+
+            <div class="title-block">
+                <h1>IONO-DIET Project</h1>
+                <p>Ionosphere-based detection for earthquake and tsunami early-warning</p>
+            </div>
+
+            <div class="logo-block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Logo_CNES_2017_triangulaire_bleu.png" alt="CNES logo">
+                <img src="https://fapesp.br/week2019/france/assets/img/logos-fapesp.png" alt="FAPESP logo">
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <div class="container">
+                <div class="nav-links">
+                    <a href="index.html">Main Page</a>
+                    <a href="project.html">About the Project</a>
+                    <a href="demo.html">Demo</a>
+                    <a href="news.html">News</a>
+                    <a href="developments.html">Developments</a>
+                    <a href="team.html">Team</a>
+                    <a href="publications.html">List of Publications</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+            <!-- SHORT INTRO -->
+            <section>
+                <h2>IONO-DIET in brief</h2>
+                <p>
+                    The Project IONO-DIET aims to develop, for the first time, ionosphere-based methods that will detect earthquakes
+                    and tsunamis in near-real-time (NRT), and will determine the earthquake source parameters and/or tsunami wave-heights
+                    from the ionosphere in NRT. The latter will be done based on detection of co-seismic and co-tsunamic ionospheric
+                    disturbances by GNSS receivers.
+                </p>
+                <p class="grant">
+                    ANR grant:
+                    <a href="https://anr.fr/Project-ANR-22-CE49-0011" target="_blank">ANR-22-CE49-0011</a>
+                </p>
+                <p class="small-text">
+                    A more detailed description, figures and schemes are available on
+                    <a href="https://iono-diet.github.io/project.html" target="_blank">About the Project</a>.
+                </p>
+            </section>
+
+            <!-- SCIENTIFIC CONTEXT -->
+            <section>
+                <h2>Scientific context</h2>
+                <p>
+                    The idea to use ionospheric measurements for tsunami warnings is not new. However, despite several promising
+                    seismo-ionospheric results presented recently, the system is not yet there. IONO-DIET aims to become the last step
+                    before the ionosphere-based EQ/tsunami risk assessment system becomes a reality.
+                </p>
+                <p>
+                    Our approach is based on development of empirical relationships between earthquake &amp; tsunami parameters and
+                    their ionospheric signatures. To fully achieve this main goal, it is necessary to address the specific objectives
+                    listed below.
+                </p>
+            </section>
+
+            <!-- OBJECTIVES -->
+            <section>
+                <h2>Main objectives</h2>
+                <ol>
+                    <li>To advance in the understanding of the solid Earth/ocean/atmosphere/ionosphere coupling and to respond the fundamental scientific questions.</li>
+                    <li>To distinguish NH-driven disturbances from those of other origins. For this purpose, we’ll work on and resolve the biggest challenge in the modern ionospheric sciences – the identification and differentiation of the source of travelling ionospheric disturbances (TIDs).</li>
+                    <li>To develop a few novel methodologies that satisfy the NRT requirements by being precise and rapid.</li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2024 IONO-DIET Team |
+            <a href="mailto:astafyeva@ipgp.fr" target="_blank">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>

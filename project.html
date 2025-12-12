@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IONO-DIET Project – About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #f4f4f4;
+            --bg-white: #ffffff;
+            --text-main: #1f2933;
+            --text-muted: #6b7280;
+            --accent: #00538a; /* marine blue */
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Header (mesmo estilo da home) */
+
+        header {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .logo-block img {
+            max-height: 40px;
+            height: auto;
+            width: auto;
+        }
+
+        .title-block {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .title-block h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .title-block p {
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: var(--bg-white);
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            white-space: nowrap;
+        }
+
+        /* Main */
+
+        main {
+            padding: 24px 0 32px;
+        }
+
+        .section {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 18px 16px 20px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            margin: 0 0 12px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            margin: 16px 0 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 8px 0;
+            text-align: justify;
+        }
+
+        ol {
+            padding-left: 20px;
+            margin: 8px 0;
+            font-size: 0.95rem;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Figures */
+
+        .figure-block {
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        .figure-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .figure-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 16px 0 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 640px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .title-block {
+                text-align: left;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-block">
+                <img src="https://anr.fr/typo3conf/ext/anr_skin/Resources/Public/assets/img/anr-logo-2021@2x.png" alt="ANR logo">
+            </div>
+
+            <div class="title-block">
+                <h1>IONO-DIET Project</h1>
+                <p>About the project</p>
+            </div>
+
+            <div class="logo-block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Logo_CNES_2017_triangulaire_bleu.png" alt="CNES logo">
+                <img src="https://fapesp.br/week2019/france/assets/img/logos-fapesp.png" alt="FAPESP logo">
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <div class="container">
+                <div class="nav-links">
+                    <a href="index.html">Main Page</a>
+                    <a href="project.html">About the Project</a>
+                    <a href="demo.html">Demo</a>
+                    <a href="news.html">News</a>
+                    <a href="developments.html">Developments</a>
+                    <a href="team.html">Team</a>
+                    <a href="publications.html">List of Publications</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+            <!-- TÍTULO PRINCIPAL -->
+            <section class="section">
+                <h2>About the Project</h2>
+                <p>
+                    The Project IONO-DIET aims to develop, for the first time, ionosphere-based methods that will detect earthquakes and tsunamis 
+                    in near-real-time (NRT), and will determine the earthquake source parameters and/or tsunami wave-heights from the ionosphere 
+                    in NRT. The latter will be done based on detection of co-seismic and co-tsunamic ionospheric disturbances by GNSS receivers.
+                </p>
+                <p>
+                    The ambition of IONO-DIET is to contribute in the improvement of the existing warning systems by rapidly providing the missing 
+                    piece of information about the seismic source and the tsunami-genesis of an earthquake, or the estimates of the wave heights of 
+                    tsunamis propagating in open sea.
+                </p>
+            </section>
+
+            <!-- IONOSPHERE -->
+            <section class="section">
+                <h2>Ionosphere</h2>
+                <p>
+                    The ionosphere is a part of the atmosphere that extends from 60–80 to 800–1000 km of altitude, where the concentration of charged 
+                    particles (i.e., free electrons and ions) is enhanced. The total mass of the ionosphere is 10**12 – 10**13 times smaller than the 
+                    mass of the neutral atmosphere. However, despite being “minor” in terms of particle concentration, the ionosphere is particularly 
+                    important with regard to radio signal propagation and radio communications in general.
+                </p>
+                <p>
+                    In 1950, the ionosphere was formally defined by the Institute of Radio Engineers committee as "the part of the Earth's upper 
+                    atmosphere where ions and electrons are present in quantities sufficient to affect the propagation of radio waves." The ionosphere 
+                    and its state depend on solar activity, diurnal (the day/night) and seasonal conditions, latitude, altitude, the coupling with the 
+                    geomagnetic field and with the neutral upper atmosphere (thermosphere).
+                </p>
+                <p>
+                    The ionosphere is primarily formed by solar radiation. Solar UV, X-ray and shorter wavelengths of solar radiation are ionising, as 
+                    photons at these frequencies contain sufficient energy to dislodge electrons from a neutral gas atom/molecule upon absorption. 
+                    The reverse process to ionisation is recombination, in which a free electron is "captured" by a positive ion. Recombination occurs 
+                    spontaneously, and causes the emission of a photon carrying away the energy produced upon recombination. As gas density increases at 
+                    lower altitudes, the recombination process prevails, since the gas molecules and ions are closer together. The balance between these 
+                    two processes determines the quantity of ionisation of the atmosphere.
+                </p>
+
+                <div class="figure-block" id="figure_1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Ionosphere-Thermosphere_Processes.jpg"
+                         alt="Complexity of upper atmosphere/ionosphere structures at Earth">
+                    <div class="figure-caption">
+                        <b>Figure 1.</b> Complexity of upper atmosphere/ionosphere structures at Earth.
+                    </div>
+                </div>
+            </section>
+
+            <!-- SAI COUPLING -->
+            <section class="section">
+                <h2>Seismo-Atmosphere–Ionosphere (SAI) coupling</h2>
+                <p>
+                    Impulsive forcing from the Earth's surface occurring due to earthquakes, explosions, volcanic eruptions, tsunamis, and so forth 
+                    triggers atmospheric pressure waves. Depending on their frequencies, these atmospheric waves can be distinguished as acoustic and 
+                    gravity waves (Figure 2). The acoustic waves are characterized by frequencies higher than the acoustic cutoff frequency (ωa), that is, 
+                    higher than ~3.3 mHz. The acoustic waves are longitudinal waves in which particle moves in the direction of the wave propagation.
+                </p>
+                <p>
+                    The force restoring a displaced particle toward its original position is the change of pressure associated with the compression of the 
+                    medium (Hargreaves, 1992). Therefore, acoustic waves traveling through a gas disturb the equilibrium state by compressions and 
+                    rarefactions (Zel'dovich &amp; Raizer, 2002). The acoustic waves propagate at the speed of sound that is equal to ~330 m/s at the surface 
+                    and grows up to 800–1,000 m/s at the ionospheric altitude of 250–300 km. Therefore, it only takes ~8–9 min for the acoustic waves to 
+                    reach the ionosphere.
+                </p>
+
+                <div class="figure-block" id="figure_2">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/fdd8ee29-d203-478c-abd8-355f1f59349d/rog20216-fig-0001-m.jpg"
+                         alt="Frequency and period ranges for acoustic and gravity waves">
+                    <div class="figure-caption">
+                        <b>Figure 2.</b> Frequency and period ranges for acoustic and gravity waves. The frequency ωa is commonly called 
+                        “the acoustic cutoff frequency” indicating that acoustic waves with ω &gt; ωa propagate through the atmosphere. The frequency ωb is 
+                        the Brunt-Väissälä frequency (or buoyancy frequency). Waves with frequencies below the ωb are the gravity waves. In the lower atmosphere, 
+                        the acoustic cutoff frequency is typically 3.3 mHz, and ωb is 2.9 mHz.
+                    </div>
+                </div>
+
+                <p>
+                    The propagation and evolution of the acoustic and gravity waves in the atmosphere is greatly affected by the propagation medium and its 
+                    properties. The exponential decrease of the atmospheric density with the altitude leads to the growth of both acoustic and gravity waves 
+                    upon their upward propagation. The wave's amplitude is proportional to the atmospheric density; however, in accordance with the energy 
+                    conservation law, the amplitude of the acoustic and gravity waves increases in order to maintain constant energy flux (Hines, 1960). 
+                    The resulting amplification factor reaches 10^4 at ~150 km of altitude (lower atmosphere) and 10^5–10^6 at 350–400 km (upper atmosphere 
+                    and ionosphere) (Blanc et al., 2010; Lognonné et al., 2006).
+                </p>
+            </section>
+
+            <!-- GNSS FOR IONOSPHERIC SOUNDING -->
+            <section class="section">
+                <h2>GNSS for Ionospheric Sounding</h2>
+                <p>
+                    GNSS offer a powerful and accessible tool allowing the monitoring of the ionosphere. Due to the dispersive nature of the ionosphere, 
+                    signals from dual-frequency GNSS receivers make it possible to measure the total electron content (TEC)—the electron density integrated 
+                    along the raypath from a satellite to a receiver (Hofmann-Wellenhof et al., 2008).
+                </p>
+                <p>
+                    Knowing the positions of GNSS satellites and those of ground-based GNSS-receivers, one can estimate the coordinates of TEC perturbations. 
+                    Assuming that the ionosphere is a thin shell layer located at the altitude Hion (Figure 3), the intersection point between the Hion and 
+                    line-of-sight (LOS) between a satellite and a receiver is called ionospheric piercing point (IPP). The IPP projection onto the Earth's 
+                    surface is called a subionospheric point (SIP). These IPP and SIP allow tracking ionospheric TEC perturbations observed by the GNSS-method.
+                </p>
+
+                <div class="figure-block" id="figure_3">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/b3ef72c4-96a8-4120-a36f-eb0a2894721d/rog20216-fig-0002-m.jpg"
+                         alt="GNSS sounding of the ionosphere">
+                    <div class="figure-caption">
+                        <b>Figure 3.</b> GNSS sounding of the ionosphere. LOS = line-of-sight between a GNSS satellite and a GNSS receiver; IPP = Ionospheric 
+                        Piercing Point; SIP = projection of the IPP on the Earth's surface. Changing the altitude Hion will change the coordinates of the SIP.
+                    </div>
+                </div>
+
+                <p>
+                    During earthquakes, vertical displacements of the ground or of the ocean floor induce perturbations in the atmosphere and ionosphere 
+                    (Figure 4). The ionospheric perturbations, called coseismic ionospheric
